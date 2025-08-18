@@ -1,0 +1,4 @@
+Apple___Cedar_apple_rust: Apply fungicides like myclobutanil or sulfur during early spring. Remove nearby cedar trees to reduce spore spread. Prune affected branches and dispose of infected leaves.
+Apple___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Tomato___Bacterial_spot: Use copper-based bactericides. Remove and destroy affected plant parts. Practice crop rotation and avoid overhead watering.
+Corn___Gray_leaf_spot: Apply fungicides like azoxystrobin. Improve air circulation through proper spacing. Use resistant corn varieties.

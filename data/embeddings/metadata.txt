@@ -1,0 +1,4 @@
+Apple___Cedar_apple_rust
+Apple___healthy
+Tomato___Bacterial_spot
+Corn___Gray_leaf_spot

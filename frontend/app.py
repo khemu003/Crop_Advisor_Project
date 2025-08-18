@@ -3,6 +3,8 @@ import requests
 from PIL import Image
 import io
 import os
+import sqlite3
+import pandas as pd
 import logging
 
 # Set up logging
@@ -15,6 +17,20 @@ st.set_page_config(page_title="Crop Disease Advisor", page_icon="🌱", layout="
 # Title and description
 st.title("🌾 AI-Powered Sustainable Agriculture Advisor")
 st.markdown("Upload a crop leaf image to detect diseases and get recommendations.")
+
+# SQLite database path
+DB_PATH = "data/db/predictions.db"
+
+def get_prediction_history():
+    """Retrieve prediction history from SQLite database."""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        df = pd.read_sql_query("SELECT * FROM predictions ORDER BY timestamp DESC", conn)
+        conn.close()
+        return df
+    except Exception as e:
+        logger.error(f"Error retrieving prediction history: {str(e)}")
+        return pd.DataFrame()
 
 # File uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
@@ -49,6 +65,7 @@ if uploaded_file is not None:
                 st.success(result["message"])
                 st.write(f"**Predicted Disease**: {result['predicted_class']}")
                 st.write(f"**Confidence**: {result['confidence']:.2%}")
+                st.write(f"**Recommendation**: {result['recommendation']}")
             else:
                 st.error(f"API Error: {response.status_code} - {response.text}")
                 logger.error(f"API error: {response.status_code} - {response.text}")
@@ -59,14 +76,32 @@ if uploaded_file is not None:
             st.error(f"Error parsing API response: {str(e)}")
             logger.error(f"Response parsing error: {str(e)}")
 
+# Display prediction history
+st.subheader("Prediction History")
+history_df = get_prediction_history()
+if not history_df.empty:
+    st.dataframe(
+        history_df[["image_name", "predicted_class", "confidence", "recommendation", "timestamp"]],
+        column_config={
+            "image_name": "Image",
+            "predicted_class": "Disease",
+            "confidence": st.column_config.NumberColumn("Confidence", format="%.2f%%"),
+            "recommendation": "Recommendation",
+            "timestamp": "Timestamp"
+        },
+        hide_index=True
+    )
+else:
+    st.info("No predictions yet. Upload an image to start.")
+
 # Sidebar for additional info
 st.sidebar.header("About")
 st.sidebar.markdown(
     """
-    This app uses a TensorFlow CNN to detect crop diseases from leaf images.
+    This app uses a TensorFlow CNN to detect crop diseases and a RAG pipeline for recommendations.
     - Trained on 87K+ images across 38 classes.
     - Achieves ~85% accuracy.
-    - Built with FastAPI, Streamlit, and TensorFlow.
+    - Built with FastAPI, Streamlit, TensorFlow, and LangChain.
     """
 )
 

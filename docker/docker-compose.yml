@@ -1,1 +1,37 @@
-# TODO: Docker Compose file
+```yaml
+version: '3.8'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./.env:/app/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - crop-advisor-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models/classification:/app/models/classification
+    depends_on:
+      - api
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - crop-advisor-network
+
+networks:
+  crop-advisor-network:
+    driver: bridge
+```
