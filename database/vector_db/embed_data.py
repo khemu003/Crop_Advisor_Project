@@ -1,1 +1,0 @@
-# TODO: Script to generate and store embeddings
