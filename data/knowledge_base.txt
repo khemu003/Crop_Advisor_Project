@@ -1,4 +1,65 @@
 Apple___Cedar_apple_rust: Apply fungicides like myclobutanil or sulfur during early spring. Remove nearby cedar trees to reduce spore spread. Prune affected branches and dispose of infected leaves.
 Apple___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Apple___Apple_scab: Apply fungicides like captan or myclobutanil. Remove fallen leaves and fruit. Prune for better air circulation.
+Apple___Black_rot: Remove infected fruit and branches. Apply fungicides like captan. Improve air circulation through pruning.
+Apple___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+
 Tomato___Bacterial_spot: Use copper-based bactericides. Remove and destroy affected plant parts. Practice crop rotation and avoid overhead watering.
+Tomato___Early_blight: Apply fungicides like chlorothalonil. Remove infected leaves. Improve air circulation and avoid overhead watering.
+Tomato___Late_blight: Apply fungicides like copper or chlorothalonil. Remove infected plants. Avoid overhead watering and improve spacing.
+Tomato___Leaf_Mold: Apply fungicides like chlorothalonil. Improve air circulation. Avoid overhead watering and reduce humidity.
+Tomato___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+
 Corn___Gray_leaf_spot: Apply fungicides like azoxystrobin. Improve air circulation through proper spacing. Use resistant corn varieties.
+Corn___Common_rust: Apply fungicides like azoxystrobin or pyraclostrobin. Plant resistant varieties. Remove crop debris after harvest.
+Corn___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+
+Potato___Early_blight: Apply fungicides like chlorothalonil. Remove infected leaves. Improve air circulation and avoid overhead watering.
+Potato___Late_blight: Apply fungicides like copper or chlorothalonil. Remove infected plants. Avoid overhead watering and improve spacing.
+Potato___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+
+Grape___Black_rot: Apply fungicides like captan or myclobutanil. Remove infected fruit and leaves. Improve air circulation through pruning.
+Grape___Esca: Remove infected vines. Apply fungicides like thiophanate-methyl. Improve drainage and avoid overwatering.
+Grape___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+
+Cherry___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Cherry___Powdery_mildew: Apply fungicides like myclobutanil or sulfur. Prune for better air circulation. Remove infected leaves.
+
+Peach___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Peach___Bacterial_spot: Apply copper-based bactericides. Remove infected leaves and fruit. Practice crop rotation.
+
+Bell_Pepper___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Bell_Pepper___Bacterial_spot: Use copper-based bactericides. Remove and destroy affected plant parts. Practice crop rotation.
+
+Strawberry___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Strawberry___Leaf_scorch: Apply fungicides like captan. Remove infected leaves. Improve air circulation and avoid overhead watering.
+
+Soybean___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Soybean___Bacterial_blight: Apply copper-based bactericides. Remove infected plants. Practice crop rotation and avoid overhead watering.
+
+Raspberry___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Raspberry___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+
+Squash___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Squash___Powdery_mildew: Apply fungicides like myclobutanil or sulfur. Prune for better air circulation. Remove infected leaves.
+
+Orange___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Orange___Haunglongbing: Remove infected trees immediately. Control Asian citrus psyllid vectors. Apply systemic insecticides.
+
+Peach___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Peach___Bacterial_spot: Apply copper-based bactericides. Remove infected leaves and fruit. Practice crop rotation.
+
+Strawberry___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Strawberry___Leaf_scorch: Apply fungicides like captan. Remove infected leaves. Improve air circulation and avoid overhead watering.
+
+Corn___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Corn___Common_rust: Apply fungicides like azoxystrobin or pyraclostrobin. Plant resistant varieties. Remove crop debris after harvest.
+
+Grape___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Grape___Black_rot: Apply fungicides like captan or myclobutanil. Remove infected fruit and leaves. Improve air circulation through pruning.
+
+Tomato___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Tomato___Septoria_leaf_spot: Apply fungicides like chlorothalonil. Remove infected leaves. Improve air circulation and avoid overhead watering.
+
+Potato___healthy: No treatment needed. Maintain regular watering and fertilization to keep plants healthy.
+Potato___Early_blight: Apply fungicides like chlorothalonil. Remove infected leaves. Improve air circulation and avoid overhead watering.

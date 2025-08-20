@@ -4,17 +4,14 @@ import os
 import sqlite3
 from pathlib import Path
 
-# Add project root to sys.path to resolve 'api' module
 sys.path.append(str(Path(__file__).parent.parent))
 
 from fastapi.testclient import TestClient
 from api.main import app
 
-# Initialize FastAPI test client
 client = TestClient(app)
 
-# Path to a valid test image (UPDATE THIS with a real image from your dataset)
-TEST_IMAGE_PATH = "data/raw/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)/valid/Apple___healthy/YOUR_IMAGE_NAME_HERE.JPG"  # Replace with valid image name
+TEST_IMAGE_PATH = "data/raw/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)/valid/Apple___healthy/YOUR_IMAGE_NAME_HERE.JPG"  # Replace with valid image
 DB_PATH = "data/db/predictions.db"
 
 @pytest.fixture
@@ -63,7 +60,6 @@ def test_predict_valid_image(test_image, setup_db):
         "data/raw/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)/train"
     ), f"Predicted class {result['predicted_class']} not in class labels"
 
-    # Verify prediction saved to database
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM predictions WHERE image_name = ?", (Path(test_image).name,))
@@ -75,7 +71,7 @@ def test_predict_valid_image(test_image, setup_db):
 
 def test_predict_invalid_file(setup_db):
     """Test prediction endpoint with a non-image file."""
-    invalid_file_path = __file__  # Use this test script as an invalid file
+    invalid_file_path = __file__
     with open(invalid_file_path, "rb") as invalid_file:
         response = client.post(
             "/api/v1/predict",
